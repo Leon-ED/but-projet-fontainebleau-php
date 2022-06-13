@@ -1,0 +1,249 @@
+
+/* Polices d'écritures */
+
+@font-face{
+    font-family: "dyno";
+    src: url("../fonts/dyno.ttf");
+
+        }
+
+@font-face{
+    font-family: "ciclefina";
+    src: url("../fonts/ciclefina.ttf");
+
+        }
+
+/* Paramètres généraux */
+body{
+    font-family:"ciclefina",Arial ;
+    margin: 0;
+    padding: 0;
+    /* background-color: #333333; */
+    background-color: #333333;
+    color: white;
+    z-index: 1;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.bloc{
+    background-color:#ea5c0d;
+    height: 100px;
+}
+.bloc a{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+#skip{
+    position:absolute;
+    left:-500px;
+}
+#skip:focus{
+    position: relative;
+    left:0;
+}
+
+.top .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    height: 90vh;
+    background-repeat: fill;
+    background: url("../medias/images/acc.jpg") no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.top .container .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    padding-left: 15px;
+    font-family: dyno;
+    color: white;
+    font-size: 50px;
+}
+
+.bloc-navigation{
+    background-color: #ea5c0d;
+}
+.top-nav{
+    display: flex;
+    margin:0;
+    padding-top: 5px;
+    padding-left: 100px;  
+    padding-right: 100px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+    flex-direction: row;
+}
+.top-nav a{
+    transition-duration: 50ms;
+}
+.top-nav a:hover{
+    border-bottom: 3px #f7af3e inset;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-content{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%; 
+    /* background-color: #505050; */
+    background-color: #333333;
+}
+.article-content p{
+    line-height: 20px;
+    font-size: 20px;
+}
+/*
+ Marge des Ã©crits quand la page est affichÃ©e sur un petit Ã©cran
+permet de rendre la lecture plus facile mais aussi l'affichage plus beau car il n'y a plus de marge
+ */
+ h1{
+    font-size: 50px;
+    /* border-bottom: 2px#f7af3e solid; */
+    /* border-bottom-right-radius: 5px; */
+    border:#f7af3e 3px solid;
+    border: #b94503 3px solid;
+    border-radius: 10px 30px;
+    padding: 7px;
+
+}
+h2{
+    width: fit-content;
+    text-align: left;
+    font-size: 40px;
+    border-bottom: 2px#f7af3e solid;
+    border-bottom-right-radius: 5px;
+}
+.bordures{
+    margin-top: 20px;
+    padding: 15px;
+    border:1px #f7af3e solid;
+    border-radius: 0px 20px 0px 20px;
+}
+.container{
+    display: flex;
+    align-items: flex-start;
+
+}
+.container *{
+    padding: 20px;
+}
+footer{
+    border-top: 2px black solid;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #505050;
+    text-align: center;
+    padding-bottom: 30px;
+}
+ul{
+    list-style:square;
+}
+
+
+.connexion_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}
+.connexion_form * {
+    font-size: 1.5rem;
+}
+.connexion_form{
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items : center;
+    justify-content: center;
+}
+.connexion_form div{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.connexion_form div label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.names{
+    display: flex;
+    flex-direction: column;
+}
+
+.names-inner{
+   display: flex;
+    flex-direction: column;   
+}
+
+@media screen and (max-width: 1200px) {
+.article-content{
+    align-items: center;
+    justify-content: center;
+    background-color:  #333333;
+    width: 100%;
+    }
+.article-content h3{
+    margin-left: 15px;
+}
+.article-content p{
+    
+    max-width: 600px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+    h1{
+        font-size: 40px;
+    }
+.top-nav{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mobile-hidden{
+    background-color: red;
+    display: none;
+
+}
+}
+

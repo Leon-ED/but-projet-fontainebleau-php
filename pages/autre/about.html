@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>A propos : Château de Fontainebleau</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Projet UNESCO : Site web du château de Fontainebleau et de son parc">
+        <meta name="author" content="Léon EDMEE">
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" href="../fichiers/medias/images/icon.PNG">
+        <link rel="stylesheet" href="../fichiers/css/styles.css">
+        <link rel="stylesheet" href="../fichiers/css/about.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a id='skip' href="#content">Aller directement au contenu</a>
+        <div class="bloc"></div>
+        <div class="top">
+            <div class="container">
+                <div class="content">
+                    <p>
+                        A propos du site
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div id='top'>
+            <nav class="bloc-navigation">
+                <ul class="top-nav" id="content">
+                    <li><a href="./accueil.html">Accueil</a></li>
+                    <li><a href="./history.html#content">Histoire</a></li>
+                    <li><a href="./visit.html#content">Visiter</a></li>
+                    <li><a href="#content">A propos</a></li>
+                    <li><a href="../en/about.html#content">EN</a></li>
+                </ul>
+            </nav>
+        </div>
+        <article>
+            <aside>
+                <p>
+                    Merci d'avoir consulté notre site !
+                    Si vous avez le temps mais surtout si vous en avez l'envie, n'hésitez pas à nous
+                    aider en remplissant le formulaire suivant :<br>
+                </p>
+                <iframe class="bordures" 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc08KKUIXc2nx45y9DGlNSyD3-2Vks2cniIGiiAUIPjYfPIRw/viewform?embedded=true" 
+                width="400" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…
+                </iframe>
+
+            </aside>
+            <div class="article-content">
+                <h1>A propos</h1>
+                    <p>
+                        Ce site web a été réalisé par l'équipe Fontainebleau du BUT 1 Informatique de l'IUT Marne-la-Vallée
+                        dans le cadre du projet de communication par :
+                        <ul>
+                            <li>DELMAS Denis : <strong>Chef de projet</strong></li>
+                            <li>CAI Delmas : <strong>Chef graphiste</strong></li>
+                            <li>EDMEE Léon : <strong>Responsable développement web et Rédacteur</strong></li>
+                            <li>DOUMI Sofiane : <strong>Responsable communication</strong></li>
+                            <li>EL OTMANI Loqmane : <strong>Rédacteur </strong></li>
+                        </ul>
+
+                    </p>
+                    <h1>Licence et crédits</h1>
+                    <p>
+                        Les images utilisées sur ce site sont libres de droits selon la licence
+                        <a href="https://creativecommons.org/licenses/by/2.0/">suivante</a>.
+                    </p>
+                    <p>Image d'accueil : <a href="https://www.fontainebleau-tourisme.com/fr/decouvrir-la-region/patrimoine/">office du tourisme de Fontainebleau</a>
+                    </p>
+            </div>
+            <!--
+            <aside>
+                <p>Retrouver le château de Fontainebleau:</p>
+                <p>
+                    <ul class='links'>
+                        <li>Sur youtube</li>
+                        <li>Sur Facebook</li>
+                        <li>Sur Twitter</li>
+                    </ul>
+                </p>
+            </aside>
+            -->
+        </article>
+        <footer>
+            <p>Site web réalisé en partenariat avec :</p>
+            <div>
+                <img src="../fichiers/medias/images/mcn.PNG" height="60" alt="Logo du MCN">
+                <img src="../fichiers/medias/images/unesco.PNG" height="70" alt="Logo de l'UNESCO">
+            </div>
+            <details>
+                <summary> 
+                    Réalisé en décembre 2021.
+                </summary>
+                Copyrights (c) 2021 - Touts droits réservés <br>
+                Les images utilisées appartiennent à leurs auteurs respectifs<br>
+                Et ont étés utilisées dans le cadre de la licence Créative Commons nous autorisant <br>
+                à les réutiliser gratuitement à but non lucratif ou commercial.
+            </details>
+
+        </footer>
+        <script>
+                        // When the user scrolls the page, execute myFunction
+                        window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("top");
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    navbar.classList.remove("top");
+} else {
+    navbar.classList.remove("sticky");
+}
+}
+        </script>
+
+    </body>

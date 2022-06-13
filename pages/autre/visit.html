@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Visiter : Château de Fontainebleau</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Projet UNESCO : Site web du château de Fontainebleau et de son parc">
+        <meta name="author" content="Léon EDMEE">
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" href="../fichiers/medias/images/icon.PNG">
+        <link rel="stylesheet" href="../fichiers/css/styles.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a id='skip' href="#content">Aller directement au contenu</a>
+        <div class="bloc"></div>
+        <div class="top">
+            <div class="container">
+                <div class="content">
+                    <p>
+                        Visiter   <br>
+                        Le parc et le château de <br>
+                    Fontainebleau</p>
+                </div>
+            </div>
+        </div>
+        <div id='top'>
+            <nav class="bloc-navigation">
+                <ul class="top-nav" id="content">
+                    <li><a href="./accueil.html">Accueil</a></li>
+                    <li><a href="./history.html#content">Histoire</a></li>
+                    <li><a href="#content">Visiter</a></li>
+                    <li><a href="./about.html#content">A propos</a></li>
+                    <li><a href="../en/visit.html#content">EN</a></li>
+                </ul>
+            </nav>
+        </div>
+        <article>
+            <div class="article-content">
+                <h1>S'y rendre</h1>
+                <p>
+                    Le château et parc de Fontainebleau sont situés dans le département de la Seine-et-Marne (77). A une distance d'environ de 70 kms de Paris ce ne sont pas les
+                    monuments les plus proches et facile d'accès depuis la capitale.
+                </p>
+                <p>
+                    Plusieurs moyens sont disponibles pour se rendre à Fontainebleau la voiture étant celle à privilégier pour la facilité et la mobilité.
+                </p>
+                <p>
+                    Ainsi, depuis Paris compter entre 1h15 et 1h50 selon le trafic pour s'y rendre en voiture.
+                    En prenant l'autoroute A6 en passant par Corbeil-Essones ou l'autoroute A4 puis l'A5b en finissant par la D606 en passant par Melun.<br> 
+                    Sur place un parking couvert et payant d'une capacité de 250 places est disponible. Il est situé à proximité immédiate de l'entrée.
+                </p>
+                <p>
+                    En transport en commun, Il faut emprunter la ligne de Transilien <img src="../fichiers/medias/images/transilien_r.png" height="20px" alt="R" title="Ligne R du réseau Transilien">
+                    à Paris Gare-de-Lyon ou les TER en direction de Montargis, Montereau, ou Laroche-Migennes puis descendre à la gare Fontainebleau-Avon et emprunter le BUS 1
+                    en direction de Les Lilas et descendre à l'arrêt <quote>Château</quote>
+                </p>
+                    <div class="mobile-hidden">
+                        <h2>Fontainebleau sur la carte</h2>
+                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=2.4736404418945317%2C48.30534908669966%2C2.9268264770507817%2C48.506369504643246&amp;layer=mapnik&amp;marker=48.40595861246658%2C2.7002334594726562" 
+                        style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=48.4060&amp;mlon=2.7002#map=12/48.4060/2.7002">
+                            Plein écran</a></small>
+                    </div>
+                </p>
+                <h1>Visite</h1>
+                <h3>Il est recommandé de prévoir 2h pour une visite libre et complète du château.</h3>
+                <p>
+                    Le château est ouvert tous les jours sauf les mardis, le 1er janvier, le 1er mai et le 25 décembre.
+                    <ul>
+                        <li> de 9h30-18h d’avril à septembre</li>
+                        <li> de 9h30-17h d’octobre à mars</li>
+                    </ul>
+
+                </p>
+                <p>
+                    L'accès au château est payant :
+                    <ul class='prix'>
+                        <li> Plein tarif : <strong>13 €</strong></li>
+                        <li>Tarif réduit : <strong>11 €</strong></li>
+                        <li>Une heure avant la fermeture : <strong>9 €</strong></li>
+                    </ul>
+                </p>
+                <p>
+                    L'accès est néanmoins gratuit le premier dimanche de chaque mois ( sauf juillet et août) et <strong>l'accès au parc est gratuit.</strong>
+                </p>
+            </div>
+        </article>
+        <footer>
+            <p>Site web réalisé en partenariat avec :</p>
+            <div>
+                <img src="../fichiers/medias/images/mcn.PNG" height="60" alt="Logo du MCN">
+                <img src="../fichiers/medias/images/unesco.PNG" height="70" alt="Logo de l'UNESCO">
+            </div>
+            <details>
+                <summary> 
+                    Réalisé en décembre 2021.
+                </summary>
+                Copyrights (c) 2021 - Touts droits réservés <br>
+                Les images utilisées appartiennent à leurs auteurs respectifs<br>
+                Et ont étés utilisées dans le cadre de la licence Créative Commons nous autorisant <br>
+                à les réutiliser gratuitement à but non lucratif ou commercial.
+            </details>
+
+        </footer>
+        <script>
+                        // When the user scrolls the page, execute myFunction
+                        window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("top");
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    navbar.classList.remove("top");
+} else {
+    navbar.classList.remove("sticky");
+}
+}
+        </script>
+
+    </body>
