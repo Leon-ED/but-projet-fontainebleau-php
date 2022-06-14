@@ -34,6 +34,21 @@ $article_php_splashScreen =[
 $about_php_speech2 = [
     "FR" => '                     </p>
                     <h1>Licence et crédits</h1>
+                    <p> 
+                        Merci à nos enseignants pour leur aide et leur contribution à la réalisation de ce site web :
+                        <ul>
+                            <li>
+                            <strong>ETTAYEB Tewfik :</strong> Responsable en chef de la SAE (professeur de Communication)
+                            </li>
+                            <li>
+                            <strong>CESSY David :</strong> Professeur pour le HTML/CSS
+                            </li>
+                            <li>
+                            <strong>REBY Yann :</strong> Professeur d\'anglais
+                            </li>
+                        </ul>
+                    </p>
+
                     <p>
                         Les images utilisées sur ce site sont libres de droits selon la licence
                         <a href="https://creativecommons.org/licenses/by/2.0/">suivante</a>.
@@ -41,6 +56,20 @@ $about_php_speech2 = [
                     <p>Image d\'accueil : <a href="https://www.fontainebleau-tourisme.com/fr/decouvrir-la-region/patrimoine/">office du tourisme de Fontainebleau</a>
                     </p>',
     "EN" => '                    <h1>Licence and credits</h1>
+                    <p> 
+                        Thanks to our teachers for their help and contribution to the realization of this website :
+                        <ul>
+                            <li>
+                            <strong>ETTAYEB Tewfik :</strong> Head of the SAE (Professor of Communication)
+                            </li>
+                            <li>
+                            <strong>CESSY David :</strong> Teacher for HTML/CSS
+                            </li>
+                            <li>
+                            <strong>REBY Yann :</strong> English teacher
+                            </li>
+                        </ul>
+                    </p>
                     <p>
                         The images used on this site are free of rights according to following
                         <a href="https://creativecommons.org/licenses/by/2.0/">licence</a>.
@@ -64,6 +93,17 @@ $about_php_speech4 = [
     "EN" => '<h1>Do you know Fontainebleau ?</h1>
     <p>
     We have designed <a href="quizz.php">this questionnaire</a> to help you get to know the castle of Fonteainebleau. Don\'t hesitate to consult it to go to bed less stupid!
+    </p>',
+];
+
+$about_php_speech5 = [
+    "FR" => '<h1>Pourquoi avoir choisi Fontainebleau ?</h1>
+            <p>
+                Fontainebleau est un château situé en Ile de France,et c\'est le plus grand château de la région. De ces faits, nous avons décidé de valoriser un patrimoine proche de notre lieu d\'étude et qui reste et restera incontournable.
+            </p>',
+    "EN" => '<h1>Why did you choose Fontainebleau?</h1>
+    <p>
+    Fontainebleau is a castle located in Ile de France, and it\'s the largest castle in the region. Of these facts, we decided to develop a heritage close to our place of study and which remains and will remain impossible to circumvent.
     </p>',
 ];
 
@@ -189,6 +229,11 @@ $admin_php_splashScreen =[
 $quizz_php_splashScreen =[
     "FR" => "Le quizz de Fontainebleau",
      "EN" => "The Fontainebleau quiz",
+];
+
+$about_php_splashScreen =[
+    "FR" => "A propos du site",
+     "EN" => "About the website",
 ];
 
 $admin_php_adminManage =[

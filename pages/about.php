@@ -28,9 +28,7 @@ $fileName = basename(__FILE__,'.php').".php";
         <div class="top">
             <div class="container">
                 <div class="content">
-                    <p>
-                        A propos du site
-                        </p>
+                <p><?php echo ${$currentPage."_splashScreen"}[$lang] ?></p>
                 </div>
             </div>
         </div>
@@ -70,6 +68,7 @@ $fileName = basename(__FILE__,'.php').".php";
 
                     </p>
                     <?php echo ${$currentPage."_speech4"}[$lang]?>
+                    <?php echo ${$currentPage."_speech5"}[$lang]?>
                    <?php echo ${$currentPage."_speech2"}[$lang]?>
             </div>
 
