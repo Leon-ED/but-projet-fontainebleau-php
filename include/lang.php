@@ -690,7 +690,7 @@ $footer_php_footer =[
             </div>
             <details>
                 <summary> 
-                    Made in december of 2021.
+                    Made in december of 2021 and updated in may of 2022.
                 </summary>
                 Copyrights (c) 2021 - All rights reserved <br>
                 The images used belong to their respective authors <br>
