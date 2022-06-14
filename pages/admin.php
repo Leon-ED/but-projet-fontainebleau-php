@@ -51,7 +51,7 @@ if(isset($_SESSION["connecte"]) && isset($_SESSION["connecte"]) == "true" && iss
 
     <article>
         <div class="article-content">
-            <h1><?php echo ${$currentPage."_contribs"}[$lang];?></h1>
+            <h1><?php echo ${$currentPage."_contribsA"}[$lang];?></h1>
             </div>       
     </article>
 
@@ -64,20 +64,26 @@ if(isset($_POST['login']) && isset($_POST['name']) && isset($_POST['lastname']))
     $lastname = $_POST['lastname'];
 
 
-    if(!(verifier_user($login,$email,$bdd))){
-    }else{
-        $req = $bdd->prepare("INSERT INTO contributeur (nom, prenom,role) VALUES (:lastname, :name, :role);");
-        $req->bindParam(':role', $role);
-        $req->bindParam(':name', $name);
-        $req->bindParam(':lastname', $lastname);
-        $req->execute();
-        print_r($req->errorInfo());
-        $idUser = $req->fetch();
-        $req->closeCursor();
-        echo "<h2> Le contributeur a été ajouté </h2>";
+    $req = $bdd->prepare("INSERT INTO contributeur (nom, prenom,role) VALUES (:lastname, :name, :role);");
+    $req->bindParam(':role', $role);
+    $req->bindParam(':name', $name);
+    $req->bindParam(':lastname', $lastname);
+    $req->execute();
+    $idUser = $req->fetch();
+    $req->closeCursor();
+    echo "<h2> Le contributeur a été ajouté </h2>";
+}
 
+if(isset($_POST['contrib'])){
+    $name = $_POST['contrib'];
+   
+    $req = $bdd->prepare("DELETE FROM contributeur WHERE idcontributeur	= :name");
+    $req->bindParam(':name', $name);
+    
+    $req->execute();
+    $req->closeCursor();
+    echo "<h2> Le contributeur a été supprimé </h2>";
 
-    }
 }
 ?>
 
@@ -97,7 +103,33 @@ if(isset($_POST['login']) && isset($_POST['name']) && isset($_POST['lastname']))
             <label for="login"><?php echo ${$currentPage."_login"}[$lang];?></label>
             <input type="text" id="login" name="login" placeholder="<?php echo ${$currentPage."_login"}[$lang];?>" required>
         </div>
-            <input type="submit" value="<?php echo ${$currentPage."_submit"}[$lang];?>">
+            <input type="submit" value="<?php echo ${$currentPage."_submitA"}[$lang];?>">
+    
+    </form>
+
+    <article>
+        <div class="article-content">
+            <h1><?php echo ${$currentPage."_contribsR"}[$lang];?></h1>
+            </div>       
+    </article>
+
+    <form action="#" method="post" class="connexion_form">
+
+
+        <div>
+        <label for="contrib">Contributeur/Contributor</label>
+        <SELECT name="contrib" required>
+                <?php
+                $contribs = $bdd->query("SELECT * FROM contributeur;");
+                print_r($contribs);
+                while ($contrib = $contribs->fetch()){
+                    echo "<option value='$contrib[0]'>$contrib[1] $contrib[2] - $contrib[3]</option>";
+                }
+                ?>
+			</SELECT><br>
+        </div>
+        
+            <input type="submit" value="<?php echo ${$currentPage."_submitR"}[$lang];?>">
     
     </form>
 

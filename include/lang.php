@@ -138,9 +138,13 @@ $admin_php_adminManage =[
      "EN" => "Add or remove administrators",
 ];
 
-$admin_php_contribs =[
-    "FR" => "Ajouter ou supprimer des contributeurs",
-     "EN" => "Add or remove contributors",
+$admin_php_contribsA =[
+    "FR" => "Ajouter des contributeurs",
+     "EN" => "Add contributors",
+];
+$admin_php_contribsR =[
+    "FR" => "Supprimer des contributeurs",
+     "EN" => "Remove contributors",
 ];
 
 
@@ -755,9 +759,13 @@ $admin_php_password =[
      "EN" => "Password",
 ];
 
-$admin_php_submit =[
+$admin_php_submitA =[
     "FR" => "Ajouter",
      "EN" => "Add",
+];
+$admin_php_submitR =[
+    "FR" => "Supprimer",
+     "EN" => "Remove",
 ];
 
 $admin_php_h1 =[
