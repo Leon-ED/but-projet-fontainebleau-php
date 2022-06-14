@@ -12,7 +12,6 @@ $sql = "SELECT * FROM utilisateur WHERE idUser = :idUser";
 $stmt = $bdd->prepare($sql);
 $stmt->bindParam(':idUser', $_SESSION["user"]);
 $stmt->execute();
-print_r($stmt->ErrorInfo());
 $user = $stmt->fetch();
 ?>
 

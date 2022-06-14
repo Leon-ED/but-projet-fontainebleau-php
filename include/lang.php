@@ -112,12 +112,36 @@ $account_php_desc =[
     Fontainebleau palace and its park, both classified as world heritage.",
 ];
 
+$admin_php_desc =[
+    "FR" => " Ce site web, réaliser lors d'un projet en partenariat avec l'UNESCO à pour but de présenter et d'honorer le
+    château de Fontainebleau ainsi que son parc, tout deux classés au patrimoine mondial.",
+
+     "EN" => "This website, created as part of a project in partnership with UNESCO, aims to present and honour the
+    Fontainebleau palace and its park, both classified as world heritage.",
+];
+
+
 //Messages d'accueil
 $index_php_splashScreen =[
     "FR" => "Fontainebleau, <br> Fleuron du patrimoine mondial",
      "EN" => "Fontainebleau, <br> a World Heritage Site",
 ];
 
+$admin_php_splashScreen =[
+    "FR" => "Administration du site",
+     "EN" => "Administration of the site",
+];
+
+
+$admin_php_adminManage =[
+    "FR" => "Ajouter ou supprimer des aministrateurs",
+     "EN" => "Add or remove administrators",
+];
+
+$admin_php_contribs =[
+    "FR" => "Ajouter ou supprimer des contributeurs",
+     "EN" => "Add or remove contributors",
+];
 
 
 //-------Contenu principal
@@ -644,8 +668,135 @@ $visit_php_article1 = [
 ];
 
 
+$footer_php_footer =[
+    "FR" => "            <p>Site web réalisé en partenariat avec :</p>
+            <div>
+                <img src='../fichiers/medias/images/mcn.PNG' height='60' alt='Logo du MCN'>
+                <img src='../fichiers/medias/images/unesco.png' height='70' alt='Logo de l'UNESCO'>
+            </div>
+            <details>
+                <summary> 
+                    Réalisé en décembre 2021 et mis au goût du jour en mai 2022.
+                </summary>
+                Copyrights (c) 2022 - Touts droits réservés <br>
+                Les images utilisées appartiennent à leurs auteurs respectifs<br>
+                Et ont étés utilisées dans le cadre de la licence Créative Commons nous autorisant <br>
+                à les réutiliser gratuitement à but non lucratif ou commercial.
+            </details>",
+     'EN' => "            <p>Made in partnership with</p>
+            <div>
+                <img src='../fichiers/medias/images/mcn.PNG' height='60' alt='MCN's logo'>
+                <img src='../fichiers/medias/images/unesco.png' height='70' alt='UNESCO's logo'>
+            </div>
+            <details>
+                <summary> 
+                    Made in december of 2021.
+                </summary>
+                Copyrights (c) 2021 - All rights reserved <br>
+                The images used belong to their respective authors <br>
+                And have been used under the Creative Commons license allowing us <br>
+                to reuse them free of charge for non-profit or commercial purposes.
+            </details>",
+];
 
 
+
+
+
+$admin_php_title =[
+    "FR" => "Compte : se créer un compte",
+     "EN" => "Account : admin",
+
+
+];
+
+//Description
+$admin_php_desc =[
+    "FR" => " Ce site web, réaliser lors d'un projet en partenariat avec l'UNESCO à pour but de présenter et d'honorer le
+    château de Fontainebleau ainsi que son parc, tout deux classés au patrimoine mondial.",
+
+     "EN" => "This website, created as part of a project in partnership with UNESCO, aims to present and honour the
+    Fontainebleau palace and its park, both classified as world heritage.",
+];
+
+//Messages d'accueil
+$admin_php_splashScreen =[
+    "FR" => "Inscrivez-vous à, <br> Fontainebleau Connect !",
+     "EN" => "admin to , <br> Fontainebleau Connect !",
+];
+
+$admin_php_form_title =[
+    "FR" => "Créez votre compte", 
+     "EN" => "Create your account",
+];
+
+$admin_php_login =[
+    "FR" => "Role",
+     "EN" => "role",
+];
+
+$admin_php_mail =[
+    "FR" => "Courriel",
+     "EN" => "Email address",
+];
+
+$admin_php_name =[
+    "FR" => "Prénom",
+     "EN" => "Name",
+];
+
+$admin_php_lastname =[
+    "FR" => "Nom de famille",
+     "EN" => "Last name",
+];
+
+$admin_php_password =[
+    "FR" => "Mot de passe ",
+     "EN" => "Password",
+];
+
+$admin_php_submit =[
+    "FR" => "Ajouter",
+     "EN" => "Add",
+];
+
+$admin_php_h1 =[
+    "FR" => "Créez votre compte Fontainebleau Connect",
+     "EN" => "Create your Fontainebleau Connect account",
+];
+
+
+
+$admin_php_h2 =[
+    "FR" => "Pourquoi utiliser Fontainebleau Connect ?",
+     "EN" => "Why use Fontainebleau Connect ?",
+];
+
+
+
+
+$admin_php_speech =[
+    "FR" => "           Pour qu'à l'avenir, vous puissiez accéder et découvrir de nouvelles façons de visiter Fontainebleau. En utilisant un compte Fontainebleau Connect, vous obtiendrez des conseils et des astuces sur Fontainebleau et sa région.
+            De plus, vous pourrez partager vos expériences avec d'autres personnes et obtenir leur avis. ",
+     "EN" => "So in the future you can access and discover new ways of visiting Fontainebleau. By using a Fontainebleau Connect account you will get tips and tricks about Fontainebleau and its area.
+            Moreover you will be able to share your experiences with other people and to get feedback from them. ",
+];
+
+$admin_php_createAccount =[
+    "FR" => " Vous n'avez pas de compte ? Créez-en un! ",
+     "EN" => "You don't have an account yet ? Create one !",
+];
+
+
+$admin_php_alreadyTaken =[
+    "FR" => " Erreur : ce compte existe déjà ! ",
+     "EN" => "Error : this account already exists !",
+];
+
+$admin_php_adminSuccess =[
+    "FR" => " Félicitations ! Vous êtes inscrit ! ",
+     "EN" => "Congratulations ! You are admined !",
+];
 
 ?>
 
