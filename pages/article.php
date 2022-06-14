@@ -72,14 +72,20 @@ $fileName = basename(__FILE__,'.php').".php";
     if(isset($_GET["id"])){
         $id = $_GET["id"];
         $sql = "SELECT * FROM article WHERE idarticle = :id";
-        $req = $bdd->prepare($sql);
-        $req->execute(["id" => $id]);
-        if($req->rowCount() == 0){
+        $req_article = $bdd->prepare($sql);
+        $req_article->execute(["id" => $id]);
+        if($req_article->rowCount() == 0){
             echo "<h1>$articleNotFound[$lang]</h1>";
         
-        ?>
+
+
+
+
+        }else{
+            ?>
         <style>
-        .ftn-articles-ctn{
+        .ftn-article{
+         
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -87,25 +93,33 @@ $fileName = basename(__FILE__,'.php').".php";
             align-items: center;
             margin-top: 2rem;
         }
+        .ftn-article h1{
+            font-size : 2rem;
+           
+        }
+        .ftn-article p{
+            font-size : 1.5rem;
+           
+        }
+        
         </style>
-
-        <?php
-        $sql = "SELECT * FROM ecrire WHERE idarticle = :id";
+            <?php
+                    $sql = "SELECT * FROM ecrire WHERE idarticle = :id";
         $req = $bdd->prepare($sql);
         $req->execute(["id" => $id]);
         $data = $req->fetch();
-        $id = $data["idadmin"];
-        $sql = "SELECT * FROM admin WHERE idadmin = :id";
-        $req = $bdd->prepare($sql);
-        $req->execute(["id" => $id]);
-        $data = $req->fetch();
-        $id = $data["idadmin"];
-        $nom = $data["nom"];
-        $prenom = $data["prenom"];
 
+        $id = $data["idadmin"];
+        $sql = "SELECT * FROM utilisateur WHERE idUser = :id";
+        $rq = $bdd->prepare($sql);
+        $rq->execute(["id" => $id]);
 
-        }else{
-            $article = $req->fetch();
+        $data = $rq->fetch();
+        $id = $data["idadmin"];
+
+        $nom_admin = $data["nom"];
+        $prenom_admin = $data["prenom"];
+            $article = $req_article->fetch();
             $titre = $article["titre"];
             $contenu = $article["contenu"];
             $date = $article["datecreation"];
@@ -114,7 +128,8 @@ $fileName = basename(__FILE__,'.php').".php";
 
             echo "<div class='ftn-article'>";
             echo "<h1> $titre </h1>";
-            echo "<h3> date : $date , $nom $prenom   </h3>";
+            echo "<h3> date : $date , $nom_admin $prenom_admin   </h3>";
+            echo "<p> $contenu </p>";
 
 
 
