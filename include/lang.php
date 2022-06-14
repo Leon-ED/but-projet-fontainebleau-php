@@ -10,6 +10,11 @@ $nom =[
      "EN" => "EN",
 ];
 
+$articleNotFound = [
+    "FR" => "Article non trouvé",
+    "EN" => "Article not found",
+];
+
 $about_php_speech = [
     "FR" => "                        Ce site web a été réalisé par l'équipe Fontainebleau du BUT 1 Informatique de l'IUT Marne-la-Vallée
                         dans le cadre du projet de communication par :",
@@ -17,8 +22,8 @@ $about_php_speech = [
 ];
 
 $article_php_splashScreen =[
-    "FR" => "Les articles à propos de Fontainebleau écris par les membres de l'équipe Fontainebleau",
-     "EN" => "The news about Fontainebleau written by the members of the Fontainebleau team",
+    "FR" => "Les articles à propos de Fontainebleau écris<br> par les membres de l'équipe Fontainebleau",
+     "EN" => "The news about Fontainebleau written<br> by the members of the Fontainebleau team",
 ];
 
 $about_php_speech2 = [
