@@ -1,4 +1,4 @@
-    <!-- Script qui permet de faire apparaître la barre de navigation en haut quand on scrolle -->''
+    <!-- Script qui permet de faire apparaître la barre de navigation en haut quand on scrolle -->
     <script>
         window.onscroll = function() {myFunction()};
         var navbar = document.getElementById('top');

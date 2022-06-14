@@ -147,7 +147,7 @@ if(isset($_POST['contrib'])){
             <label for="contenu">Contenu de l'article</label>
             <textarea id="contenu" name="contenu" placeholder="Contenu de l'article" required maxlength="5000"></textarea>
         </div>
-        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
         <div>
             <label for="file">Image</label>
             <input type="file" id="file" name="file" accept="image/png, image/jpeg" value="" required/>
