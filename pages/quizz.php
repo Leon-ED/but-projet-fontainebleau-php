@@ -38,25 +38,25 @@ $fileName = basename(__FILE__,'.php').".php";
             if ($_POST["q1"] == "1") {
                 $note = $note + 1;
             }
-            if ($_POST["q2"] == "2") {
+            if ($_POST["q2"] == "0") {
                 $note = $note + 1;
             }
             if ($_POST["q3"] == "0") {
                 $note = $note + 1;
             }
-            if ($_POST["q4"] == "0") {
+            if ($_POST["q4"] == "2") {
                 $note = $note + 1;
             }
-            if ($_POST["q5"] == "2") {
+            if ($_POST["q5"] == "0") {
                 $note = $note + 1;
             }
-            if ($_POST["q6"] == "4") {
+            if ($_POST["q6"] == "3") {
                 $note = $note + 1;
             }
-            if ($_POST["q7"] == "0") {
+            if ($_POST["q7"] == "2") {
                 $note = $note + 1;
             }
-            if ($_POST["q8"] == "3") {
+            if ($_POST["q8"] == "2") {
                 $note = $note + 1;
             }
             if ($_POST["q9"] == "0") {
