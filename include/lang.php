@@ -16,7 +16,10 @@ $about_php_speech = [
     "EN" => "This website was created by the Fontainebleau team of the BUT 1 Informatique of the IUT Marne-la-Vallée as part of the communication project by :",
 ];
 
-
+$article_php_splashScreen =[
+    "FR" => "Les articles à propos de Fontainebleau écris par les membres de l'équipe Fontainebleau",
+     "EN" => "The news about Fontainebleau written by the members of the Fontainebleau team",
+];
 
 $about_php_speech2 = [
     "FR" => '                     </p>
