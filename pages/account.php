@@ -1,7 +1,8 @@
 <?php
 require_once("../include/phpHeader.inc.php");
 // Récupère la langue et les textes selon la langue choisie
-include_once("../include/lang.php");
+$currentPage = basename(__FILE__,'.php')."_php";
+$fileName = basename(__FILE__,'.php').".php";
 $currentPage = basename(__FILE__,'.php')."_php";
 $fileName = basename(__FILE__,'.php').".php";
 if(isset($_SESSION["connecte"]) && isset($_SESSION["connecte"]) == "true" && isset($_SESSION["user"]) ){
