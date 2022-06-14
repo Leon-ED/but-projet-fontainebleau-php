@@ -15,6 +15,11 @@ $articleNotFound = [
     "EN" => "Article not found",
 ];
 
+$admin_php_article = [
+    "FR" => "Ajouter un article",
+    "EN" => "Add article",
+];
+
 $about_php_speech = [
     "FR" => "                        Ce site web a été réalisé par l'équipe Fontainebleau du BUT 1 Informatique de l'IUT Marne-la-Vallée
                         dans le cadre du projet de communication par :",

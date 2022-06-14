@@ -131,6 +131,29 @@ if(isset($_POST['contrib'])){
         
             <input type="submit" value="<?php echo ${$currentPage."_submitR"}[$lang];?>">
     
+            </form>
+
+    <article>
+        <div class="article-content">
+            <h1><?php echo ${$currentPage."_article"}[$lang];?></h1>
+            </div>       
+    </article>
+    <form enctype="multipart/form-data" action="article_create.php" method="post" class="connexion_form">
+        <div>
+            <label for="titre">Titre de l'article</label>
+            <input type="text" id="titre" name="titre" placeholder="Titre de l'article" required maxlength="200">
+        </div>
+        <div>
+            <label for="contenu">Contenu de l'article</label>
+            <textarea id="contenu" name="contenu" placeholder="Contenu de l'article" required maxlength="5000"></textarea>
+        </div>
+        <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+        <div>
+            <label for="file">Image</label>
+            <input type="file" id="file" name="file" accept="image/png, image/jpeg" value="" required/>
+            <input type="submit">
+        </div>
+    
     </form>
 
 </main>
