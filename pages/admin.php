@@ -5,6 +5,24 @@ include_once("../include/lang.php");
 $currentPage = basename(__FILE__,'.php')."_php";
 $fileName = basename(__FILE__,'.php').".php";
 ?>
+<?php
+if(isset($_SESSION["connecte"]) && isset($_SESSION["connecte"]) == "true" && isset($_SESSION["user"]) ){
+    $sql = "SELECT * FROM admin WHERE idadmin = :idUser";
+    $stmt = $bdd->prepare($sql);
+    $stmt->bindParam(':idUser', $_SESSION["user"]);;
+    $stmt->execute();
+    $user = $stmt->fetch();
+    if($stmt->rowCount() >= 1){
+
+
+    }else{
+        header("Location: ./index.php");
+    }
+
+}else{
+    header("Location: ./index.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang=<?php echo "$lang" ?>>
