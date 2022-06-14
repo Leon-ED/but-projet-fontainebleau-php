@@ -69,10 +69,12 @@ $fileName = basename(__FILE__,'.php').".php";
                         </ul>
 
                     </p>
+                    <?php echo ${$currentPage."_speech4"}[$lang]?>
                    <?php echo ${$currentPage."_speech2"}[$lang]?>
             </div>
 
         </article>
+        
 <?php include_once("./teamplates/footer.php"); ?>
 
     </body>
