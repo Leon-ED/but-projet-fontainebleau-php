@@ -10,6 +10,38 @@ $nom =[
      "EN" => "EN",
 ];
 
+$about_php_speech = [
+    "FR" => "                        Ce site web a été réalisé par l'équipe Fontainebleau du BUT 1 Informatique de l'IUT Marne-la-Vallée
+                        dans le cadre du projet de communication par :",
+    "EN" => "This website was created by the Fontainebleau team of the BUT 1 Informatique of the IUT Marne-la-Vallée as part of the communication project by :",
+];
+
+
+
+$about_php_speech2 = [
+    "FR" => '                     </p>
+                    <h1>Licence et crédits</h1>
+                    <p>
+                        Les images utilisées sur ce site sont libres de droits selon la licence
+                        <a href="https://creativecommons.org/licenses/by/2.0/">suivante</a>.
+                    </p>
+                    <p>Image d\'accueil : <a href="https://www.fontainebleau-tourisme.com/fr/decouvrir-la-region/patrimoine/">office du tourisme de Fontainebleau</a>
+                    </p>',
+    "EN" => '                    <h1>Licence and credits</h1>
+                    <p>
+                        The images used on this site are free of rights according to following
+                        <a href="https://creativecommons.org/licenses/by/2.0/">licence</a>.
+                    </p>
+                    <p>Home image : <a href="https://www.fontainebleau-tourisme.com/en/discover-the-region/patrimoine-2/">office du tourisme de Fontainebleau</a>
+                    </p>',
+];
+
+$about_php_speech3 = [
+    "FR" => "                                          Merci d'avoir consulté notre site !
+                    Si vous avez le temps mais surtout si vous en avez l'envie, n'hésitez pas à nous
+                    aider en remplissant le formulaire suivant :<br>",
+    "EN" => "Thank you for visiting our site! If you have the time, but especially if you have the desire, do not hesitate to help us by by filling in the following form:<br>",
+];
 
 
 
