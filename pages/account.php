@@ -3,7 +3,8 @@ require_once("../include/phpHeader.inc.php");
 // Récupère la langue et les textes selon la langue choisie
 $currentPage = basename(__FILE__,'.php')."_php";
 $fileName = basename(__FILE__,'.php').".php";
-
+$currentPage = basename(__FILE__,'.php')."_php";
+$fileName = basename(__FILE__,'.php').".php";
 if(isset($_SESSION["connecte"]) && isset($_SESSION["connecte"]) == "true" && isset($_SESSION["user"]) ){
 }else{
     header("Location: ./index.php");
@@ -43,16 +44,7 @@ $user = $stmt->fetch();
             <div class="article-content">
                 <h1><?php echo ${$currentPage."_yourInfos"}[$lang];?></h1>
 
-                <ul>
-                <li><?php echo ${$currentPage."_yourName"}[$lang];?> : <?php echo $user["prenom"]." ".$user["nom"] ?></li>
-                <li><?php echo ${$currentPage."_yourEmail"}[$lang];?> : <?php echo $user["email"] ?></li>
-                <li><?php echo ${$currentPage."_yourPhone"}[$lang];?> : <?php echo $user["telephone"] ?></li>
-                <li><?php echo ${$currentPage."_yourAdress"}[$lang];?> : <?php echo $user["adresse"] ?></li>
                 
-
-
-
-                </ul>
 
 
 

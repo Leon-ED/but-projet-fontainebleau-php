@@ -86,6 +86,9 @@ if(isset($_POST['contrib'])){
 
 }
 ?>
+
+
+
     <form action="#" method="post" class="connexion_form">
         <div>
             <label for="name"><?php echo ${$currentPage."_name"}[$lang];?></label>
@@ -134,4 +137,6 @@ if(isset($_POST['contrib'])){
 
 
 <?php include_once("./teamplates/footer.php"); ?>
+
+
     </body>
