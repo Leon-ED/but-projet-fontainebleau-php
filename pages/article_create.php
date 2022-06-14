@@ -14,13 +14,38 @@ error_reporting(E_ALL);
     echo "Le fichier est valide, et a été téléchargé
            avec succès. Voici plus d'informations :\n";
 } else {
-    echo "Attaque potentielle par téléchargement de fichiers.
-          Voici plus d'informations :\n";
+    header("Location: ./admin.php?erreur=uploadError");
 }
 
-echo 'Voici quelques informations de débogage :';
-print_r($_FILES);
+$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    }
+    else {
+        header("Location: ./admin.php?erreur=fileTypeError");
+        $uploadOk = 0;
+    }
 
+    $sql = "INSERT INTO article (datecreation, titre, contenu, image) VALUES (:date, :titre, :contenu, :image) RETURNING idarticle";
+    $stmt = $bdd->prepare($sql);
+    $stmt->bindParam(':date', date("Y-m-d"));
+    $stmt->bindParam(':titre', $_POST["titre"]);
+    $stmt->bindParam(':contenu', $_POST["contenu"]);
+    $stmt->bindParam(':image',basename($_FILES['file']['name']));
+    $stmt->execute();
+    $idArticle = $stmt->fetch();
+    $idArticle = $idArticle["idarticle"];
+
+
+    $sql = "INSERT INTO ecrire (idadmin, idarticle) VALUES (:idamin, :idarticle)";
+    $stmt = $bdd->prepare($sql);
+    $stmt->bindParam(':idamin', $id);
+    $stmt->bindParam(':idarticle', $idArticle);
+    $stmt->execute();
+
+
+    header("Location: ./admin.php?success=articleCreated");
 
 
     // header("Location: ./article.php");

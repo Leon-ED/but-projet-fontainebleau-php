@@ -35,12 +35,17 @@ $fileName = basename(__FILE__,'.php').".php";
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     margin-top: 2rem;
+    gap: 20px
 
 }
+a{
+    max-width:284px;
+}
 .ftn-articles-ctn .ftn-articles-total{
+    width:284px;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -54,7 +59,7 @@ $fileName = basename(__FILE__,'.php').".php";
     flex-direction: column;
     flex-wrap: wrap;
     align-items:center;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: center;
     border : 1px solid #e6e6e6;
     border-radius: 5px;
@@ -92,8 +97,10 @@ $fileName = basename(__FILE__,'.php').".php";
             justify-content: space-around;
             align-items: center;
             margin-top: 2rem;
+            width:50%;
         }
         .ftn-article h1{
+            
             font-size : 2rem;
            
         }
@@ -101,10 +108,15 @@ $fileName = basename(__FILE__,'.php').".php";
             font-size : 1.5rem;
            
         }
+        @media screen and (max-width: 1200px) {
+     .ftn-article{
+        width: 95%;
+     }
+    }
         
         </style>
             <?php
-                    $sql = "SELECT * FROM ecrire WHERE idarticle = :id";
+                    $sql = "SELECT * FROM ecrire WHERE idarticle = :id ORDER BY idarticle DESC";
         $req = $bdd->prepare($sql);
         $req->execute(["id" => $id]);
         $data = $req->fetch();
@@ -119,7 +131,9 @@ $fileName = basename(__FILE__,'.php').".php";
 
         $nom_admin = $data["nom"];
         $prenom_admin = $data["prenom"];
+        
             $article = $req_article->fetch();
+            $article_id = $article["idarticle"];
             $titre = $article["titre"];
             $contenu = $article["contenu"];
             $date = $article["datecreation"];
@@ -127,9 +141,13 @@ $fileName = basename(__FILE__,'.php').".php";
     
 
             echo "<div class='ftn-article'>";
+if(isset($_SESSION["connecte"]) && $_SESSION["connecte"] == "true" && isset($_SESSION["user"]) && isset($_SESSION["isadmin"]) && $_SESSION["isadmin"] == "true" && isset($_GET["id"])){
+            echo "<a style='color:red; ' href='article_delete.php?id=$article_id&lang=$lang'>Supprimer article</a>";
+}
+
             echo "<h1> $titre </h1>";
-            echo "<h3> date : $date , $nom_admin $prenom_admin   </h3>";
             echo "<p> $contenu </p>";
+             echo "<h3>  $nom_admin $prenom_admin, $date   </h3>";
 
 
 
@@ -141,9 +159,14 @@ $fileName = basename(__FILE__,'.php').".php";
 
     }else{
 
+?>
 
-
-
+     <style>
+        .article-titre{
+            width:100%;
+        }
+     </style>
+<?php
  $sql = "SELECT * FROM article";
     $result = $bdd->prepare($sql);
     $result->execute();
@@ -151,15 +174,18 @@ $fileName = basename(__FILE__,'.php').".php";
     if ($result->rowCount() > 0) {
         // output data of each row
         while($row = $result->fetch()) {
+            if($row["visible"] == 0){
+                continue;
+            }
             echo "<style> 
             .article-".$row["idarticle"]."{
                 background-image: url('../fichiers/medias/images/articles/".$row["image"]."');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
+                
             }
+            
             
             
             
@@ -170,7 +196,8 @@ $fileName = basename(__FILE__,'.php').".php";
             
 
             echo "</div>
-            <h3>".$row["titre"]."</h3>
+            <div class='article-titre'
+            <h3>".$row["titre"]."</h3></div>
             </div>";
             echo "</a>";
 
