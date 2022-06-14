@@ -104,6 +104,14 @@ $index_php_desc =[
     Fontainebleau palace and its park, both classified as world heritage.",
 ];
 
+$account_php_desc =[
+    "FR" => " Ce site web, réaliser lors d'un projet en partenariat avec l'UNESCO à pour but de présenter et d'honorer le
+    château de Fontainebleau ainsi que son parc, tout deux classés au patrimoine mondial.",
+
+     "EN" => "This website, created as part of a project in partnership with UNESCO, aims to present and honour the
+    Fontainebleau palace and its park, both classified as world heritage.",
+];
+
 //Messages d'accueil
 $index_php_splashScreen =[
     "FR" => "Fontainebleau, <br> Fleuron du patrimoine mondial",

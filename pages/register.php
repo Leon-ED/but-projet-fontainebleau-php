@@ -56,11 +56,9 @@ if(isset($_POST['login']) && isset($_POST['password'])   && isset($_POST['email'
         $req->bindParam(':dateC', $dateC);
         $req->execute();
         $idUser = $req->fetch();
-        $idUser = $idUser['idUser'];
-        print_r($req->ErrorInfo());
         $req->closeCursor();
-        echo "<h1> $idUser </h1>";
         echo "<h2> Votre compte a été créé avec succès ! </h2>";
+        header("Location: ./login.php#content");
 
 
     }
