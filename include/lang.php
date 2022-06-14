@@ -47,19 +47,14 @@ $about_php_speech3 = [
 ];
 
 $about_php_speech4 = [
-    "FR" => '                     </p>
-                    <h1>Connaissez vous Fontainebleau ?</h1>
-                    <p>
-                        Nous avons conçu <a href="quizz.php">ce questionnaire</a> pour vous aider à connaître le château de Fontainebleau. N\'hésitez pas à le consulter pour vous coucher moins bête !
-                    </p>
-                   ',
-    "EN" => '                    <h1>Licence and credits</h1>
-                    <p>
-                        The images used on this site are free of rights according to following
-                        <a href="https://creativecommons.org/licenses/by/2.0/">licence</a>.
-                    </p>
-                    <p>Home image : <a href="https://www.fontainebleau-tourisme.com/en/discover-the-region/patrimoine-2/">office du tourisme de Fontainebleau</a>
-                    </p>',
+    "FR" => '<h1>Connaissez vous Fontainebleau ?</h1>
+            <p>
+                Nous avons conçu <a href="quizz.php">ce questionnaire</a> pour vous aider à connaître le château de Fontainebleau. N\'hésitez pas à le consulter pour vous coucher moins bête !
+            </p>',
+    "EN" => '<h1>Do you know Fontainebleau ?</h1>
+    <p>
+    We have designed <a href="quizz.php">this questionnaire</a> to help you get to know the castle of Fonteainebleau. Don\'t hesitate to consult it to go to bed less stupid!
+    </p>',
 ];
 
 
