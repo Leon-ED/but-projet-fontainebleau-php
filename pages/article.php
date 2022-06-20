@@ -3,8 +3,6 @@ require_once("../include/phpHeader.inc.php");
 // Récupère la langue et les textes selon la langue choisie
 $currentPage = basename(__FILE__,'.php')."_php";
 $fileName = basename(__FILE__,'.php').".php";
-$currentPage = basename(__FILE__,'.php')."_php";
-$fileName = basename(__FILE__,'.php').".php";
 ?>
 
 <!DOCTYPE html>
@@ -134,10 +132,13 @@ a{
         
             $article = $req_article->fetch();
             $article_id = $article["idarticle"];
-            $titre = $article["titre"];
-            $contenu = $article["contenu"];
+            $titre = $article["titre_".$lang];
+            $contenu = $article["contenu_".$lang];
             $date = $article["datecreation"];
-        
+            if($contenu == null){
+                echo "<h1> We are sorry this article is not available yet in your language : ".$lang."</h1><br>";
+                // echo "<h2><a href='article.php?id=$article_id&lang=FR#content'>You may read it in French</a></h2>";
+            }
     
 
             echo "<div class='ftn-article'>";
@@ -190,14 +191,16 @@ if(isset($_SESSION["connecte"]) && $_SESSION["connecte"] == "true" && isset($_SE
             
             
             </style>";
-            echo "<a href='article.php?id=".$row["idarticle"]."'>";
+            echo "<a href='article.php?id=".$row["idarticle"]."&lang=".$lang."'>";
             echo "<div class='ftn-articles-total'>";
             echo "<div class='ftn-articles-item article-".$row["idarticle"]."'>";
-            
-
+            $titre = $row["titre_".$lang];
+            if($row["titre_".$lang] == null){
+                $titre = $article["titre_FR"];
+            }
             echo "</div>
             <div class='article-titre'
-            <h3>".$row["titre"]."</h3></div>
+            <h3>".$titre."</h3></div>
             </div>";
             echo "</a>";
 

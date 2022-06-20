@@ -28,7 +28,7 @@ if(isset($_SESSION["connecte"]) && isset($_SESSION["connecte"]) == "true" && iss
                 <li><a href="./article.php?lang=<?php echo $lang?>#content">Articles</a></li>
                 <li><a href="./visit.php?lang=<?php echo $lang?>#content"><?php echo $visit[$lang] ?></a></li>
                 <li><a href="./about.php?lang=<?php echo $lang?>#content"><?php echo $about[$lang] ?></a></li>
-                <li><a href="./<?php echo $fileName.'?lang='.$otherLang;?>"><?php echo $otherLang?></a></li>
+                <li><a href="./<?php echo $fileName.'?lang='.$otherLang;?>#content"><?php echo $otherLang?></a></li>
                 <div>
                     <li><a href="./account.php?lang=<?php echo $lang?>#content"><?php echo $account[$lang] ?></a></li>
                     <li><a href="./logout.php?lang=<?php echo $lang?>#content"><?php echo $logout[$lang] ?></a></li>
@@ -54,7 +54,7 @@ else{
                 <li><a href="./article.php?lang=<?php echo $lang?>#content">Articles</a></li>
                 <li><a href="./visit.php?lang=<?php echo $lang?>#content"><?php echo $visit[$lang] ?></a></li>
                 <li><a href="./about.php?lang=<?php echo $lang?>#content"><?php echo $about[$lang] ?></a></li>                
-                <li><a href="./<?php echo $fileName.'?lang='.$otherLang;?>"><?php echo $otherLang?></a></li>
+                <li><a href="./<?php echo $fileName.'?lang='.$otherLang;?>#content"><?php echo $otherLang?></a></li>
                 <div>
                     <li><a href="./login.php?lang=<?php echo $lang?>#content"><?php echo $login[$lang] ?></a></li>
                     <li><a href="./register.php?lang=<?php echo $lang?>#content"><?php echo $register[$lang] ?></a></li>

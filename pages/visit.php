@@ -3,8 +3,6 @@ require_once("../include/phpHeader.inc.php");
 // Récupère la langue et les textes selon la langue choisie
 $currentPage = basename(__FILE__,'.php')."_php";
 $fileName = basename(__FILE__,'.php').".php";
-$currentPage = basename(__FILE__,'.php')."_php";
-$fileName = basename(__FILE__,'.php').".php";
 ?>
 
 <!DOCTYPE html>

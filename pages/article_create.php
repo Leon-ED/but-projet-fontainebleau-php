@@ -10,39 +10,32 @@ error_reporting(E_ALL);
     $uploaddir = "../fichiers/medias/images/articles/";
     $uploadfile = $uploaddir . basename($_FILES['file']['name']);
 
-    if (copy($_FILES['file']['tmp_name'], $uploadfile)) {
+        if (copy($_FILES['file']['tmp_name'], $uploadfile)) {
     echo "Le fichier est valide, et a été téléchargé
            avec succès. Voici plus d'informations :\n";
 } else {
     header("Location: ./admin.php?erreur=uploadError");
 }
 
-$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    }
-    else {
-        header("Location: ./admin.php?erreur=fileTypeError");
-        $uploadOk = 0;
-    }
-
-    $sql = "INSERT INTO article (datecreation, titre, contenu, image) VALUES (:date, :titre, :contenu, :image) RETURNING idarticle";
+    $sql = "INSERT INTO article (datecreation, \"titre_FR\", \"contenu_FR\", image,\"titre_EN\",\"contenu_EN\") VALUES (:date, :titre, :contenu, :image,:titre_EN,:contenu_EN) RETURNING idarticle";
     $stmt = $bdd->prepare($sql);
     $stmt->bindParam(':date', date("Y-m-d"));
     $stmt->bindParam(':titre', $_POST["titre"]);
     $stmt->bindParam(':contenu', $_POST["contenu"]);
+    $stmt->bindParam(':titre_EN', $_POST["titre_EN"]);
+    $stmt->bindParam(':contenu_EN', $_POST["contenu_EN"]);
     $stmt->bindParam(':image',basename($_FILES['file']['name']));
     $stmt->execute();
     $idArticle = $stmt->fetch();
     $idArticle = $idArticle["idarticle"];
-
+    
 
     $sql = "INSERT INTO ecrire (idadmin, idarticle) VALUES (:idamin, :idarticle)";
     $stmt = $bdd->prepare($sql);
     $stmt->bindParam(':idamin', $id);
     $stmt->bindParam(':idarticle', $idArticle);
     $stmt->execute();
+    
 
 
     header("Location: ./admin.php?success=articleCreated");

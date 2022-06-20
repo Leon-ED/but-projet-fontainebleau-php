@@ -440,7 +440,7 @@ $history_php_article1 = [
                         Palace of
                         Fontainebleau</figcaption>
                 </figure>
-                <h2>Le Palace of roi Soleil</h2>
+                <h2>Le Palace of the Sun King <i>(le Roi Soleil)</i></h2>
                 <p>
                 The main project of Louis XIV, the Sun King, was to renovate and settle in Versailles.
                 But during the renovations the young king's court moved to Fontainebleau.

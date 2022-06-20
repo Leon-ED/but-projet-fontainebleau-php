@@ -140,12 +140,21 @@ if(isset($_POST['contrib'])){
     </article>
     <form enctype="multipart/form-data" action="article_create.php" method="post" class="connexion_form">
         <div>
-            <label for="titre">Titre de l'article</label>
+            <label for="titre">Titre de l'article (FR)</label>
             <input type="text" id="titre" name="titre" placeholder="Titre de l'article" required maxlength="200">
         </div>
         <div>
-            <label for="contenu">Contenu de l'article</label>
+            <label for="titre_EN">Titre de l'article (EN)</label>
+            <input type="text" id="titre_EN" name="titre_EN" placeholder="Titre de l'article" required maxlength="200">
+        </div>
+
+        <div>
+            <label for="contenu">Contenu de l'article (FR)</label>
             <textarea id="contenu" name="contenu" placeholder="Contenu de l'article" required maxlength="5000"></textarea>
+        </div>
+                <div>
+            <label for="contenu_EN">Contenu de l'article (EN)</label>
+            <textarea id="contenu_EN" name="contenu_EN" placeholder="Contenu de l'article" required maxlength="5000"></textarea>
         </div>
         <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
         <div>
